@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Focus Scheduler</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="leftPanel">
+
+<h1>🔥 AI Focus Scheduler</h1>
+
+<div class="card">
+
+<h3>AI Planner</h3>
+
+<button onclick="startAI()">Start AI Planner</button>
+
+</div>
+
+<div class="card">
+
+<h3>Manual Task</h3>
+
+<input id="taskName" placeholder="Task name">
+
+<input type="date" id="taskDate">
+
+<input type="time" id="taskTime">
+
+<input type="number" id="taskDuration" placeholder="Duration (minutes)">
+
+<button onclick="addManual()">Add Task</button>
+
+</div>
+
+<h3>Your Tasks</h3>
+
+<ul id="taskList"></ul>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="rightPanel">
+
+<h2>Generated Plans</h2>
+
+<div class="tabs">
+
+<button onclick="showTab('study')">📚 Study</button>
+
+<button onclick="showTab('exercise')">💪 Exercise</button>
+
+<button onclick="showTab('mixed')">⚡ Mixed</button>
+
+</div>
+
+<div id="studyContent">
+
+<h3>Study Plan</h3>
+
+<ul id="studyList"></ul>
+
+</div>
+
+<div id="exerciseContent" style="display:none">
+
+<h3>Exercise Plan</h3>
+
+<ul id="exerciseList"></ul>
+
+</div>
+
+<div id="mixedContent" style="display:none">
+
+<h3>Mixed Plan</h3>
+
+<ul id="mixedList"></ul>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
